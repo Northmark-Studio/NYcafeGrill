@@ -13,6 +13,7 @@
   --pastrami: #a63a2b;
   --pastrami-dark: #8c2f22;
   --olive: #4a4a33;
+  --paper: #ffffff;
 
   --font-display: "Anton", "Arial Narrow", sans-serif;
   --font-body: "Karla", "Segoe UI", sans-serif;
@@ -37,7 +38,7 @@ body {
   font-size: 1.0625rem;
   line-height: 1.65;
   color: var(--espresso);
-  background: var(--cream);
+  background: var(--paper);
 }
 
 img,
@@ -361,7 +362,7 @@ a {
 }
 
 .section-cream {
-  background: var(--cream);
+  background: var(--paper);
   color: var(--espresso);
 }
 
