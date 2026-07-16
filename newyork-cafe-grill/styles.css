@@ -14,6 +14,8 @@
   --pastrami-dark: #8c2f22;
   --olive: #4a4a33;
   --paper: #ffffff;
+  --paper-gray: #f4f3f1;
+  --paper-dim: #e6e4e0;
 
   --font-display: "Anton", "Arial Narrow", sans-serif;
   --font-body: "Karla", "Segoe UI", sans-serif;
@@ -127,13 +129,13 @@ a {
 
 .btn-outline-cream {
   background: transparent;
-  color: var(--cream);
-  border-color: var(--cream);
+  color: var(--espresso);
+  border-color: var(--espresso);
 }
 
 .btn-outline-cream:hover {
-  background: var(--cream);
-  color: var(--espresso);
+  background: var(--espresso);
+  color: var(--paper);
 }
 
 .btn-outline-dark {
@@ -248,9 +250,9 @@ a {
    ========================================================================== */
 
 .hero {
-  background: var(--espresso);
-  background-image: radial-gradient(ellipse 80% 60% at 70% 20%, rgba(201, 138, 59, 0.09), transparent 70%);
-  color: var(--cream);
+  background: var(--paper-gray);
+  background-image: radial-gradient(ellipse 80% 60% at 70% 20%, rgba(201, 138, 59, 0.12), transparent 70%);
+  color: var(--espresso);
   min-height: calc(100vh - 62px);
   display: flex;
   align-items: center;
@@ -293,7 +295,7 @@ a {
   max-width: 34rem;
   margin: 1.75rem 0 2.25rem;
   font-size: 1.15rem;
-  color: var(--cream-dim);
+  color: var(--olive);
   opacity: 0;
   animation: rise-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.45s forwards;
 }
@@ -321,7 +323,7 @@ a {
 
 .steam path {
   fill: none;
-  stroke: var(--cream);
+  stroke: var(--espresso);
   stroke-width: 3;
   stroke-linecap: round;
   opacity: 0;
@@ -367,12 +369,12 @@ a {
 }
 
 .section-espresso {
-  background: var(--espresso);
-  color: var(--cream);
+  background: var(--paper-gray);
+  color: var(--espresso);
 }
 
 .section-espresso .section-title {
-  color: var(--cream);
+  color: var(--espresso);
 }
 
 .lead-copy {
@@ -418,12 +420,12 @@ a {
 
 .ticket {
   position: relative;
-  background: var(--cream);
+  background: var(--paper);
   color: var(--espresso);
   border-radius: 0 0 var(--radius) var(--radius);
   padding: 2.25rem 2rem 2rem;
   margin-top: 8px;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 14px 40px rgba(42, 27, 18, 0.16);
 }
 
 /* perforated top edge: notches cut out showing section background */
@@ -434,14 +436,14 @@ a {
   left: 0;
   right: 0;
   height: 8px;
-  background-image: radial-gradient(circle at 8px 8px, transparent 5.5px, var(--cream) 6px);
+  background-image: radial-gradient(circle at 8px 8px, transparent 5.5px, var(--paper) 6px);
   background-size: 16px 8px;
   background-repeat: repeat-x;
 }
 
 .section-cream .ticket {
   box-shadow: 0 10px 30px rgba(42, 27, 18, 0.14);
-  border: 1px solid var(--cream-dim);
+  border: 1px solid var(--paper-dim);
   border-top: 0;
 }
 
@@ -532,7 +534,7 @@ a {
 }
 
 .menu-preview-copy p {
-  color: var(--cream-dim);
+  color: var(--olive);
   max-width: 30rem;
   margin-bottom: 2rem;
 }
@@ -561,7 +563,7 @@ a {
 .visit-details address {
   font-style: normal;
   margin-bottom: 1.75rem;
-  color: var(--cream-dim);
+  color: var(--olive);
 }
 
 .hours {
@@ -576,7 +578,7 @@ a {
   justify-content: space-between;
   max-width: 22rem;
   padding: 0.4rem 0;
-  border-bottom: 1px dotted rgba(246, 237, 221, 0.25);
+  border-bottom: 1px dotted rgba(42, 27, 18, 0.3);
 }
 
 .directions-link {
@@ -584,14 +586,14 @@ a {
   font-size: 0.875rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--crust-bright);
+  color: var(--pastrami);
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
 }
 
 .contact-block {
-  background: rgba(246, 237, 221, 0.05);
-  border: 1px solid rgba(246, 237, 221, 0.15);
+  background: var(--paper);
+  border: 1px solid var(--paper-dim);
   border-radius: var(--radius);
   padding: 2.5rem;
   align-self: start;
@@ -606,7 +608,7 @@ a {
 }
 
 .contact-block p {
-  color: var(--cream-dim);
+  color: var(--olive);
   margin-bottom: 1.75rem;
 }
 
@@ -615,8 +617,8 @@ a {
    ========================================================================== */
 
 .page-hero {
-  background: var(--espresso);
-  color: var(--cream);
+  background: var(--paper-gray);
+  color: var(--espresso);
   padding: 4.5rem 0 4rem;
   text-align: center;
 }
@@ -650,8 +652,9 @@ a {
    ========================================================================== */
 
 .site-footer {
-  background: var(--espresso-deep);
-  color: var(--cream-dim);
+  background: var(--paper-gray);
+  color: var(--olive);
+  border-top: 1px solid var(--paper-dim);
   padding: 3.5rem 0 2.5rem;
 }
 
@@ -668,18 +671,18 @@ a {
   font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--cream);
+  color: var(--espresso);
   margin-bottom: 0.5rem;
 }
 
 .footer-grid a {
-  color: var(--cream-dim);
+  color: var(--olive);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
 
 .footer-grid a:hover {
-  color: var(--crust-bright);
+  color: var(--pastrami);
 }
 
 .footer-col h4 {
@@ -703,7 +706,7 @@ a {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   letter-spacing: 0.1em;
-  border-top: 1px solid rgba(246, 237, 221, 0.12);
+  border-top: 1px solid rgba(42, 27, 18, 0.15);
   padding-top: 1.5rem;
 }
 
