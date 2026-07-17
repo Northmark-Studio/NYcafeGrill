@@ -1,28 +1,28 @@
 /* ==========================================================================
-   Newyork Cafe & Grill — NY deli signage design system
-   Palette: espresso / bagel crust / sesame cream / pastrami / olive
+   Newyork Cafe & Grill — sunny corner-deli storefront
+   All-white paper, warm serif headlines, red-striped awning signature
    ========================================================================== */
 
 :root {
-  --espresso: #2a1b12;
-  --espresso-deep: #201409;
-  --crust: #c98a3b;
-  --crust-bright: #e0a457;
-  --cream: #f6eddd;
-  --cream-dim: #e9dcc4;
-  --pastrami: #a63a2b;
-  --pastrami-dark: #8c2f22;
-  --olive: #4a4a33;
+  --ink: #241a10;
+  --ink-soft: #5c5245;
   --paper: #ffffff;
-  --paper-gray: #f4f3f1;
-  --paper-dim: #e6e4e0;
+  --flour: #faf7f2;
+  --line: #ece4d8;
+  --sesame: #c98a3b;
+  --sesame-deep: #a96f28;
+  --tomato: #c03b2d;
+  --tomato-deep: #9e2f24;
+  --pickle: #5a6440;
+  --glow: #fff3dd;
 
-  --font-display: "Anton", "Arial Narrow", sans-serif;
+  --font-display: "Fraunces", "Georgia", serif;
   --font-body: "Karla", "Segoe UI", sans-serif;
   --font-mono: "IBM Plex Mono", "Courier New", monospace;
 
   --container: 1120px;
-  --radius: 5px;
+  --radius: 10px;
+  --shadow-soft: 0 10px 30px rgba(36, 26, 16, 0.08);
 }
 
 * {
@@ -39,7 +39,7 @@ body {
   font-family: var(--font-body);
   font-size: 1.0625rem;
   line-height: 1.65;
-  color: var(--espresso);
+  color: var(--ink);
   background: var(--paper);
 }
 
@@ -54,7 +54,7 @@ a {
 }
 
 :focus-visible {
-  outline: 3px solid var(--crust);
+  outline: 3px solid var(--tomato);
   outline-offset: 3px;
 }
 
@@ -71,18 +71,17 @@ a {
   font-size: 0.8125rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--crust);
+  color: var(--sesame-deep);
   display: block;
   margin-bottom: 1rem;
 }
 
 .section-title {
   font-family: var(--font-display);
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.01em;
-  font-size: clamp(2.25rem, 5vw, 3.5rem);
-  line-height: 1.05;
+  font-weight: 600;
+  font-size: clamp(2.1rem, 4.5vw, 3.25rem);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
   margin-bottom: 1.25rem;
 }
 
@@ -90,13 +89,14 @@ a {
 
 .btn {
   display: inline-block;
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
+  font-weight: 700;
   font-size: 0.9375rem;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   text-decoration: none;
   padding: 0.9rem 1.75rem;
-  border-radius: var(--radius);
+  border-radius: 999px;
   border: 2px solid transparent;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
 }
@@ -106,59 +106,77 @@ a {
 }
 
 .btn-solid {
-  background: var(--crust);
-  color: var(--espresso-deep);
-  border-color: var(--crust);
+  background: var(--tomato);
+  color: var(--paper);
+  border-color: var(--tomato);
 }
 
 .btn-solid:hover {
-  background: var(--crust-bright);
-  border-color: var(--crust-bright);
+  background: var(--tomato-deep);
+  border-color: var(--tomato-deep);
 }
 
 .btn-pastrami {
-  background: var(--pastrami);
-  color: var(--cream);
-  border-color: var(--pastrami);
+  background: var(--tomato);
+  color: var(--paper);
+  border-color: var(--tomato);
 }
 
 .btn-pastrami:hover {
-  background: var(--pastrami-dark);
-  border-color: var(--pastrami-dark);
+  background: var(--tomato-deep);
+  border-color: var(--tomato-deep);
 }
 
 .btn-outline-cream {
   background: transparent;
-  color: var(--espresso);
-  border-color: var(--espresso);
+  color: var(--ink);
+  border-color: var(--ink);
 }
 
 .btn-outline-cream:hover {
-  background: var(--espresso);
+  background: var(--ink);
   color: var(--paper);
 }
 
 .btn-outline-dark {
   background: transparent;
-  color: var(--espresso);
-  border-color: var(--espresso);
+  color: var(--ink);
+  border-color: var(--ink);
 }
 
 .btn-outline-dark:hover {
-  background: var(--espresso);
-  color: var(--cream);
+  background: var(--ink);
+  color: var(--paper);
 }
 
 /* ==========================================================================
-   Header / nav
+   Header / nav — white, with the striped awning edge as signature
    ========================================================================== */
 
 .site-header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: var(--espresso-deep);
-  border-bottom: 1px solid rgba(246, 237, 221, 0.12);
+  background: var(--paper);
+}
+
+/* scalloped red-and-white awning strip under the header */
+.site-header::after {
+  content: "";
+  display: block;
+  height: 12px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--tomato) 0 36px,
+    var(--paper) 36px 72px
+  );
+  border-top: 2px solid var(--ink);
+  -webkit-mask-image: radial-gradient(circle 18px at 18px 0, black 17px, transparent 18px);
+  -webkit-mask-size: 36px 12px;
+  -webkit-mask-repeat: repeat-x;
+  mask-image: radial-gradient(circle 18px at 18px 0, black 17px, transparent 18px);
+  mask-size: 36px 12px;
+  mask-repeat: repeat-x;
 }
 
 .nav {
@@ -166,23 +184,24 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  padding: 0.9rem 1.5rem;
+  padding: 1rem 1.5rem;
   max-width: var(--container);
   margin: 0 auto;
 }
 
 .brand {
   font-family: var(--font-display);
-  font-size: 1.05rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--cream);
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.01em;
+  color: var(--ink);
   text-decoration: none;
   white-space: nowrap;
 }
 
 .brand span {
-  color: var(--crust);
+  color: var(--tomato);
+  font-style: italic;
 }
 
 .nav-links {
@@ -193,11 +212,12 @@ a {
 }
 
 .nav-links a:not(.btn) {
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  letter-spacing: 0.1em;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--cream);
+  color: var(--ink);
   text-decoration: none;
   padding: 0.25rem 0;
   border-bottom: 2px solid transparent;
@@ -206,8 +226,8 @@ a {
 
 .nav-links a:not(.btn):hover,
 .nav-links a:not(.btn)[aria-current="page"] {
-  color: var(--crust-bright);
-  border-bottom-color: var(--crust);
+  color: var(--tomato);
+  border-bottom-color: var(--tomato);
 }
 
 .nav-links .btn {
@@ -218,7 +238,7 @@ a {
 .nav-toggle {
   display: none;
   background: none;
-  border: 2px solid var(--cream);
+  border: 2px solid var(--ink);
   border-radius: var(--radius);
   padding: 0.5rem 0.65rem;
   cursor: pointer;
@@ -228,7 +248,7 @@ a {
   display: block;
   width: 22px;
   height: 2px;
-  background: var(--cream);
+  background: var(--ink);
   margin: 4px 0;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
@@ -246,33 +266,28 @@ a {
 }
 
 /* ==========================================================================
-   Hero
+   Hero — copy beside the storefront illustration
    ========================================================================== */
 
 .hero {
-  background: var(--paper-gray);
-  background-image: radial-gradient(ellipse 80% 60% at 70% 20%, rgba(201, 138, 59, 0.12), transparent 70%);
-  color: var(--espresso);
-  min-height: calc(100vh - 62px);
-  display: flex;
-  align-items: center;
-  padding: 5rem 0 4rem;
+  background: var(--paper);
+  color: var(--ink);
+  padding: 4.5rem 0 5rem;
 }
 
 .hero-inner {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
   align-items: center;
-  gap: 3rem;
+  gap: 3.5rem;
 }
 
 .hero-headline {
   font-family: var(--font-display);
-  font-weight: 400;
-  text-transform: uppercase;
-  font-size: clamp(3.25rem, 9.5vw, 8.5rem);
-  line-height: 0.98;
-  letter-spacing: 0.005em;
+  font-weight: 600;
+  font-size: clamp(3rem, 7.5vw, 5.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.015em;
 }
 
 .hero-headline .line {
@@ -283,19 +298,21 @@ a {
 }
 
 .hero-headline .line:nth-child(2) {
-  color: var(--crust);
+  color: var(--tomato);
+  font-style: italic;
   animation-delay: 0.15s;
 }
 
 .hero-headline .line:nth-child(3) {
+  color: var(--sesame-deep);
   animation-delay: 0.3s;
 }
 
 .hero-sub {
-  max-width: 34rem;
+  max-width: 30rem;
   margin: 1.75rem 0 2.25rem;
   font-size: 1.15rem;
-  color: var(--olive);
+  color: var(--ink-soft);
   opacity: 0;
   animation: rise-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.45s forwards;
 }
@@ -315,15 +332,22 @@ a {
   }
 }
 
-/* coffee cup + steam */
+/* storefront illustration */
 
 .hero-art {
   justify-self: center;
+  width: 100%;
+  max-width: 560px;
+}
+
+.hero-art svg {
+  width: 100%;
+  height: auto;
 }
 
 .steam path {
   fill: none;
-  stroke: var(--espresso);
+  stroke: var(--ink-soft);
   stroke-width: 3;
   stroke-linecap: round;
   opacity: 0;
@@ -341,22 +365,22 @@ a {
 @keyframes steam-rise {
   0% {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(6px);
   }
   30% {
-    opacity: 0.35;
+    opacity: 0.4;
   }
   70% {
-    opacity: 0.12;
+    opacity: 0.15;
   }
   100% {
     opacity: 0;
-    transform: translateY(-26px);
+    transform: translateY(-14px);
   }
 }
 
 /* ==========================================================================
-   Sections
+   Sections — white and flour-white alternation
    ========================================================================== */
 
 .section {
@@ -365,20 +389,23 @@ a {
 
 .section-cream {
   background: var(--paper);
-  color: var(--espresso);
+  color: var(--ink);
 }
 
 .section-espresso {
-  background: var(--paper-gray);
-  color: var(--espresso);
+  background: var(--flour);
+  color: var(--ink);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
 .section-espresso .section-title {
-  color: var(--espresso);
+  color: var(--ink);
 }
 
 .lead-copy {
   max-width: 40rem;
+  color: var(--ink-soft);
 }
 
 .lead-copy p + p {
@@ -390,27 +417,33 @@ a {
 .features {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
+  gap: 2rem;
   margin-top: 3.5rem;
+}
+
+.feature {
+  background: var(--flour);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.5rem;
 }
 
 .feature svg {
   width: 44px;
   height: 44px;
   margin-bottom: 1rem;
-  stroke: var(--pastrami);
+  stroke: var(--tomato);
 }
 
 .feature h3 {
-  font-family: var(--font-mono);
-  font-size: 0.9375rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
   margin-bottom: 0.5rem;
 }
 
 .feature p {
-  color: var(--olive);
+  color: var(--ink-soft);
   font-size: 0.975rem;
 }
 
@@ -421,11 +454,13 @@ a {
 .ticket {
   position: relative;
   background: var(--paper);
-  color: var(--espresso);
+  color: var(--ink);
   border-radius: 0 0 var(--radius) var(--radius);
   padding: 2.25rem 2rem 2rem;
   margin-top: 8px;
-  box-shadow: 0 14px 40px rgba(42, 27, 18, 0.16);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--line);
+  border-top: 0;
 }
 
 /* perforated top edge: notches cut out showing section background */
@@ -441,18 +476,12 @@ a {
   background-repeat: repeat-x;
 }
 
-.section-cream .ticket {
-  box-shadow: 0 10px 30px rgba(42, 27, 18, 0.14);
-  border: 1px solid var(--paper-dim);
-  border-top: 0;
-}
-
 .ticket-head {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   gap: 1rem;
-  border-bottom: 2px dashed var(--espresso);
+  border-bottom: 2px dashed var(--line);
   padding-bottom: 0.9rem;
   margin-bottom: 1.25rem;
 }
@@ -461,15 +490,14 @@ a {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   letter-spacing: 0.18em;
-  color: var(--olive);
+  color: var(--ink-soft);
 }
 
 .ticket-cat {
   font-family: var(--font-display);
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.35rem;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.01em;
 }
 
 .ticket ul {
@@ -490,13 +518,13 @@ a {
 
 .ticket .item-name small {
   display: block;
-  color: var(--olive);
+  color: var(--ink-soft);
   font-size: 0.85rem;
 }
 
 .ticket .leader {
   flex: 1;
-  border-bottom: 2px dotted rgba(42, 27, 18, 0.35);
+  border-bottom: 2px dotted rgba(36, 26, 16, 0.3);
   transform: translateY(-4px);
 }
 
@@ -504,18 +532,19 @@ a {
   font-family: var(--font-mono);
   font-weight: 600;
   font-size: 0.9375rem;
+  color: var(--tomato);
   white-space: nowrap;
 }
 
 .ticket-foot {
   margin-top: 1.25rem;
   padding-top: 0.9rem;
-  border-top: 2px dashed var(--espresso);
+  border-top: 2px dashed var(--line);
   font-family: var(--font-mono);
   font-size: 0.75rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--olive);
+  color: var(--ink-soft);
   text-align: center;
 }
 
@@ -534,7 +563,7 @@ a {
 }
 
 .menu-preview-copy p {
-  color: var(--olive);
+  color: var(--ink-soft);
   max-width: 30rem;
   margin-bottom: 2rem;
 }
@@ -563,7 +592,7 @@ a {
 .visit-details address {
   font-style: normal;
   margin-bottom: 1.75rem;
-  color: var(--olive);
+  color: var(--ink-soft);
 }
 
 .hours {
@@ -578,37 +607,38 @@ a {
   justify-content: space-between;
   max-width: 22rem;
   padding: 0.4rem 0;
-  border-bottom: 1px dotted rgba(42, 27, 18, 0.3);
+  border-bottom: 1px dotted rgba(36, 26, 16, 0.3);
 }
 
 .directions-link {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
+  font-weight: 700;
   font-size: 0.875rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--pastrami);
+  color: var(--tomato);
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
 }
 
 .contact-block {
   background: var(--paper);
-  border: 1px solid var(--paper-dim);
+  border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 2.5rem;
   align-self: start;
+  box-shadow: var(--shadow-soft);
 }
 
 .contact-block h3 {
   font-family: var(--font-display);
-  font-weight: 400;
-  text-transform: uppercase;
+  font-weight: 600;
   font-size: 1.6rem;
   margin-bottom: 0.75rem;
 }
 
 .contact-block p {
-  color: var(--olive);
+  color: var(--ink-soft);
   margin-bottom: 1.75rem;
 }
 
@@ -617,18 +647,19 @@ a {
    ========================================================================== */
 
 .page-hero {
-  background: var(--paper-gray);
-  color: var(--espresso);
+  background: var(--flour);
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
   padding: 4.5rem 0 4rem;
   text-align: center;
 }
 
 .page-hero h1 {
   font-family: var(--font-display);
-  font-weight: 400;
-  text-transform: uppercase;
-  font-size: clamp(3rem, 8vw, 6rem);
-  line-height: 1;
+  font-weight: 600;
+  font-size: clamp(2.75rem, 7vw, 5rem);
+  line-height: 1.02;
+  letter-spacing: -0.015em;
 }
 
 .menu-grid {
@@ -644,7 +675,7 @@ a {
   font-family: var(--font-mono);
   font-size: 0.8125rem;
   letter-spacing: 0.1em;
-  color: var(--olive);
+  color: var(--ink-soft);
 }
 
 /* ==========================================================================
@@ -652,9 +683,9 @@ a {
    ========================================================================== */
 
 .site-footer {
-  background: var(--paper-gray);
-  color: var(--olive);
-  border-top: 1px solid var(--paper-dim);
+  background: var(--flour);
+  color: var(--ink-soft);
+  border-top: 1px solid var(--line);
   padding: 3.5rem 0 2.5rem;
 }
 
@@ -668,21 +699,20 @@ a {
 
 .footer-brand {
   font-family: var(--font-display);
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--espresso);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--ink);
   margin-bottom: 0.5rem;
 }
 
 .footer-grid a {
-  color: var(--olive);
+  color: var(--ink-soft);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
 
 .footer-grid a:hover {
-  color: var(--pastrami);
+  color: var(--tomato);
 }
 
 .footer-col h4 {
@@ -690,7 +720,7 @@ a {
   font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--crust);
+  color: var(--sesame-deep);
   margin-bottom: 0.75rem;
 }
 
@@ -706,7 +736,7 @@ a {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   letter-spacing: 0.1em;
-  border-top: 1px solid rgba(42, 27, 18, 0.15);
+  border-top: 1px solid var(--line);
   padding-top: 1.5rem;
 }
 
@@ -735,7 +765,8 @@ a {
   }
 
   .hero-art {
-    display: none;
+    order: -1;
+    max-width: 460px;
   }
 
   .menu-preview-grid,
@@ -750,7 +781,7 @@ a {
 
   .features {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.25rem;
   }
 }
 
@@ -767,8 +798,8 @@ a {
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
-    background: var(--espresso-deep);
-    border-bottom: 1px solid rgba(246, 237, 221, 0.12);
+    background: var(--paper);
+    border-bottom: 2px solid var(--ink);
     padding: 0.5rem 1.5rem 1.25rem;
     display: none;
   }
