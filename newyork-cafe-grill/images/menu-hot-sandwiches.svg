@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540">
+  <rect width="900" height="540" fill="#f4f3f1"/>
+  <path d="M170 330h560l-72 112H242z" fill="#e9dcc4" stroke="#2a1b12" stroke-width="18"/>
+  <path d="M215 326c22-170 448-170 470 0z" fill="#e0a457" stroke="#2a1b12" stroke-width="18"/>
+  <path d="M250 260h400" stroke="#a63a2b" stroke-width="42"/>
+  <path d="M275 218h350" stroke="#f6eddd" stroke-width="32"/>
+  <path d="M300 177h300" stroke="#4a4a33" stroke-width="24"/>
+  <path d="M352 112c-25-45 28-55 4-101M450 112c-25-45 28-55 4-101M548 112c-25-45 28-55 4-101" fill="none" stroke="#a63a2b" stroke-width="12" stroke-linecap="round"/>
+  <rect y="470" width="900" height="70" fill="#2a1b12"/>
+  <text x="450" y="515" text-anchor="middle" fill="#f6eddd" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="4">HOT SANDWICHES — REPLACE IMAGE</text>
+</svg>

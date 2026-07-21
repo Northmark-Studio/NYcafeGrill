@@ -315,44 +315,44 @@ a {
   }
 }
 
-/* coffee cup + steam */
+/* hero restaurant photo */
 
-.hero-art {
-  justify-self: center;
+.hero-photo {
+  justify-self: stretch;
+  overflow: hidden;
+  border: 8px solid var(--paper);
+  border-radius: var(--radius);
+  box-shadow: 18px 18px 0 var(--crust), 0 24px 55px rgba(42, 27, 18, 0.24);
+  transform: rotate(1.25deg);
 }
 
-.steam path {
-  fill: none;
-  stroke: var(--espresso);
-  stroke-width: 3;
-  stroke-linecap: round;
-  opacity: 0;
-  animation: steam-rise 4.5s ease-in-out infinite;
+.hero-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
 }
 
-.steam path:nth-child(2) {
-  animation-delay: 1.4s;
+/* banner image */
+
+.banner-section {
+  background: var(--paper);
+  padding: 1.5rem 0 5.5rem;
 }
 
-.steam path:nth-child(3) {
-  animation-delay: 2.8s;
+.food-banner {
+  overflow: hidden;
+  border: 1px solid var(--paper-dim);
+  border-radius: var(--radius);
+  box-shadow: 0 18px 45px rgba(42, 27, 18, 0.18);
 }
 
-@keyframes steam-rise {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  30% {
-    opacity: 0.35;
-  }
-  70% {
-    opacity: 0.12;
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-26px);
-  }
+.food-banner img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
 }
 
 /* ==========================================================================
@@ -361,6 +361,16 @@ a {
 
 .section {
   padding: 5.5rem 0;
+}
+
+#about,
+#menu,
+#visit {
+  scroll-margin-top: 5rem;
+}
+
+.eyebrow-pastrami {
+  color: var(--pastrami);
 }
 
 .section-cream {
@@ -458,6 +468,7 @@ a {
 }
 
 .ticket-order {
+  flex-shrink: 0;
   font-family: var(--font-mono);
   font-size: 0.75rem;
   letter-spacing: 0.18em;
@@ -484,7 +495,8 @@ a {
 }
 
 .ticket .item-name {
-  flex-shrink: 0;
+  flex: 0 1 auto;
+  min-width: 0;
   max-width: 70%;
 }
 
@@ -496,6 +508,7 @@ a {
 
 .ticket .leader {
   flex: 1;
+  min-width: 1rem;
   border-bottom: 2px dotted rgba(42, 27, 18, 0.35);
   transform: translateY(-4px);
 }
@@ -519,24 +532,25 @@ a {
   text-align: center;
 }
 
-/* home menu preview layout */
+/* full menu */
 
-.menu-preview-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
-  gap: 3.5rem;
-  align-items: center;
+.menu-intro {
+  max-width: 42rem;
+  margin-bottom: 3.5rem;
 }
 
-.menu-preview-grid .ticket {
-  max-width: 460px;
-  width: 100%;
-}
-
-.menu-preview-copy p {
+.menu-intro p {
   color: var(--olive);
-  max-width: 30rem;
-  margin-bottom: 2rem;
+}
+
+.menu-category-image {
+  width: calc(100% + 4rem);
+  max-width: none;
+  height: auto;
+  aspect-ratio: 5 / 3;
+  object-fit: cover;
+  margin: -2.25rem -2rem 1.5rem;
+  border-bottom: 1px solid var(--paper-dim);
 }
 
 /* ==========================================================================
@@ -613,23 +627,8 @@ a {
 }
 
 /* ==========================================================================
-   Menu page
+   Menu layout
    ========================================================================== */
-
-.page-hero {
-  background: var(--paper-gray);
-  color: var(--espresso);
-  padding: 4.5rem 0 4rem;
-  text-align: center;
-}
-
-.page-hero h1 {
-  font-family: var(--font-display);
-  font-weight: 400;
-  text-transform: uppercase;
-  font-size: clamp(3rem, 8vw, 6rem);
-  line-height: 1;
-}
 
 .menu-grid {
   display: grid;
@@ -734,11 +733,16 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .hero-art {
-    display: none;
+  .hero-photo {
+    max-width: 44rem;
+    transform: none;
+    box-shadow: 12px 12px 0 var(--crust), 0 20px 45px rgba(42, 27, 18, 0.2);
   }
 
-  .menu-preview-grid,
+  .hero-photo img {
+    aspect-ratio: 16 / 10;
+  }
+
   .visit-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
@@ -792,6 +796,47 @@ a {
 
   .section {
     padding: 4rem 0;
+  }
+
+  .banner-section {
+    padding: 1rem 0 4rem;
+  }
+
+  .menu-intro {
+    margin-bottom: 2.75rem;
+  }
+
+  .ticket {
+    padding: 1.75rem 1.25rem 1.5rem;
+  }
+
+  .menu-category-image {
+    width: calc(100% + 2.5rem);
+    margin: -1.75rem -1.25rem 1.25rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .ticket-head {
+    align-items: flex-start;
+  }
+
+  .ticket li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.75rem;
+  }
+
+  .ticket .item-name {
+    max-width: none;
+  }
+
+  .ticket .leader {
+    display: none;
+  }
+
+  .ticket .price {
+    text-align: right;
   }
 }
 

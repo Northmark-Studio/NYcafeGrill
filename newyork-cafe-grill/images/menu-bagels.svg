@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540">
+  <rect width="900" height="540" fill="#f4f3f1"/>
+  <circle cx="450" cy="250" r="190" fill="#e0a457" stroke="#2a1b12" stroke-width="20"/>
+  <circle cx="450" cy="250" r="72" fill="#f4f3f1" stroke="#2a1b12" stroke-width="16"/>
+  <g fill="#f6eddd">
+    <ellipse cx="345" cy="133" rx="9" ry="22" transform="rotate(-35 345 133)"/><ellipse cx="465" cy="91" rx="9" ry="22" transform="rotate(20 465 91)"/><ellipse cx="570" cy="145" rx="9" ry="22" transform="rotate(45 570 145)"/><ellipse cx="615" cy="270" rx="9" ry="22" transform="rotate(75 615 270)"/><ellipse cx="520" cy="390" rx="9" ry="22" transform="rotate(25 520 390)"/><ellipse cx="360" cy="392" rx="9" ry="22" transform="rotate(-20 360 392)"/><ellipse cx="290" cy="270" rx="9" ry="22" transform="rotate(70 290 270)"/>
+  </g>
+  <rect y="470" width="900" height="70" fill="#2a1b12"/>
+  <text x="450" y="515" text-anchor="middle" fill="#f6eddd" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="5">BAGELS — REPLACE IMAGE</text>
+</svg>

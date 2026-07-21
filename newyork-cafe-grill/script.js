@@ -23,6 +23,33 @@
     });
   }
 
+  // Re-align direct anchor links after web fonts finish loading
+  function alignInitialHash() {
+    if (!window.location.hash) return;
+
+    var id;
+    try {
+      id = decodeURIComponent(window.location.hash.slice(1));
+    } catch (error) {
+      return;
+    }
+
+    var target = document.getElementById(id);
+    if (target) {
+      target.scrollIntoView({ block: "start" });
+    }
+  }
+
+  if (window.location.hash) {
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function () {
+        window.requestAnimationFrame(alignInitialHash);
+      });
+    } else {
+      window.addEventListener("load", alignInitialHash);
+    }
+  }
+
   // Scroll reveal (once per element)
   var revealEls = document.querySelectorAll(".reveal");
   var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

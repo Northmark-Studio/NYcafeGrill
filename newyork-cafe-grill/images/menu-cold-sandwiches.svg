@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540">
+  <rect width="900" height="540" fill="#f4f3f1"/>
+  <path d="M155 355h590l-90 96H245z" fill="#e9dcc4" stroke="#2a1b12" stroke-width="18"/>
+  <path d="M220 205h460l72 146H148z" fill="#e0a457" stroke="#2a1b12" stroke-width="18" stroke-linejoin="round"/>
+  <path d="M188 326l524-2" stroke="#4a4a33" stroke-width="28"/>
+  <path d="M202 282c75-49 133 48 208 0s133 48 208 0 116 31 116 31" fill="none" stroke="#a63a2b" stroke-width="42"/>
+  <path d="M230 236l440 1" stroke="#f6eddd" stroke-width="25"/>
+  <g fill="#2a1b12"><circle cx="330" cy="165" r="8"/><circle cx="450" cy="145" r="8"/><circle cx="565" cy="168" r="8"/></g>
+  <rect y="470" width="900" height="70" fill="#2a1b12"/>
+  <text x="450" y="515" text-anchor="middle" fill="#f6eddd" font-family="Arial, sans-serif" font-size="27" font-weight="700" letter-spacing="3">COLD SANDWICHES — REPLACE IMAGE</text>
+</svg>
