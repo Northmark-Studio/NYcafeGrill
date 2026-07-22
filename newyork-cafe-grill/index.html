@@ -8,261 +8,300 @@
   <meta property="og:title" content="Newyork Cafe & Grill — Edison, NJ">
   <meta property="og:description" content="Fresh-baked bagels, hot and cold sandwiches, wraps, and salads. Family-run deli in Edison, NJ.">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#2a1b12">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='42' fill='%23c98a3b'/%3E%3Ccircle cx='50' cy='50' r='16' fill='%232a1b12'/%3E%3C/svg%3E">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%2327272a'/%3E%3Ctext x='50' y='68' font-family='sans-serif' font-size='58' font-weight='800' fill='white' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Karla:wght@400;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Work+Sans:ital,wght@0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top">
 
-  <header class="site-header">
-    <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href="#top">Newyork <span>Cafe &amp; Grill</span></a>
+  <!-- NAV -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner container">
+      <a class="brand" href="#top">
+        <span class="brand-mark">N</span>
+        <span class="brand-name">Newyork Cafe &amp; Grill</span>
+      </a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#visit">Visit</a></li>
-        <li><a class="btn btn-pastrami" href="https://order.online" target="_blank" rel="noopener">Order online</a></li>
-      </ul>
-    </nav>
-  </header>
+      <div class="nav-links" id="nav-links">
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a class="btn btn-solid" href="https://order.online" target="_blank" rel="noopener">Order online</a>
+      </div>
+    </div>
+  </nav>
 
   <main>
 
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div>
-          <span class="eyebrow">Edison, NJ — Est. 2021</span>
-          <h1 class="hero-headline">
-            <span class="line">Bagels.</span>
-            <span class="line">Sandwiches.</span>
-            <span class="line">Wraps.</span>
-          </h1>
-          <p class="hero-sub">Fresh-baked every morning at Newyork Cafe &amp; Grill. Treat your friends and family to the good stuff.</p>
-          <div class="hero-ctas">
-            <a class="btn btn-solid" href="#menu">See the menu</a>
-            <a class="btn btn-outline-cream" href="https://order.online" target="_blank" rel="noopener">Order online</a>
+    <!-- HERO BANNER SLIDER -->
+    <section class="hero" aria-label="Featured">
+      <div class="hero-viewport">
+        <div class="hero-track" id="hero-track">
+
+          <article class="hero-slide">
+            <div class="hero-copy">
+              <span class="eyebrow">Edison, NJ — Est. 2021</span>
+              <h1 class="hero-title">Bagels. Sandwiches. Wraps.</h1>
+              <p class="hero-sub">Fresh-baked every morning at Newyork Cafe &amp; Grill. Treat your friends and family to the good stuff.</p>
+              <div class="hero-ctas">
+                <a class="btn btn-solid" href="#menu">See the menu</a>
+                <a class="btn btn-outline" href="https://order.online" target="_blank" rel="noopener">Order online</a>
+              </div>
+            </div>
+            <div class="hero-media">
+              <img src="images/restaurant-hero.jpg" alt="Warm restaurant dining room with tables, booths, and an open kitchen" loading="eager" fetchpriority="high" decoding="async">
+            </div>
+          </article>
+
+          <article class="hero-slide">
+            <div class="hero-copy">
+              <span class="eyebrow">Off the grill</span>
+              <h1 class="hero-title">Bacon, Egg &amp; Cheese — $6.50</h1>
+              <p class="hero-sub">On a fresh everything bagel, made to order while you wait.</p>
+              <div class="hero-ctas">
+                <a class="btn btn-solid" href="https://order.online" target="_blank" rel="noopener">Order online</a>
+              </div>
+            </div>
+            <div class="hero-media">
+              <img src="images/cafe-banner.svg" alt="Newyork Cafe &amp; Grill banner" loading="lazy" decoding="async">
+            </div>
+          </article>
+
+          <article class="hero-slide">
+            <div class="hero-copy">
+              <span class="eyebrow">Catering &amp; big orders</span>
+              <h1 class="hero-title">Feeding the whole office.</h1>
+              <p class="hero-sub">Trays, boxed lunches, weekend orders — call ahead and we've got you.</p>
+              <div class="hero-ctas">
+                <a class="btn btn-solid" href="mailto:newyorkcafegrill@gmail.com?subject=Catering%20inquiry">Send us an email</a>
+              </div>
+            </div>
+            <div class="hero-media">
+              <img src="images/menu-coffee-drinks.svg" alt="Fresh coffee and drinks" loading="lazy" decoding="async">
+            </div>
+          </article>
+
+        </div>
+
+        <div class="hero-controls container">
+          <div class="hero-dots" id="hero-dots" role="tablist" aria-label="Choose slide"></div>
+          <div class="hero-arrows">
+            <button class="round-btn" id="hero-prev" aria-label="Previous slide">‹</button>
+            <button class="round-btn" id="hero-next" aria-label="Next slide">›</button>
           </div>
         </div>
-        <figure class="hero-photo">
-          <img src="images/restaurant-hero.jpg" width="1400" height="933" loading="eager" fetchpriority="high" decoding="async" alt="Warm restaurant dining room with tables, booths, and an open kitchen">
-        </figure>
       </div>
     </section>
 
-    <!-- Banner image -->
-    <section class="banner-section" aria-label="Restaurant banner">
+    <!-- PRODUCT SLIDER -->
+    <section class="section products">
       <div class="container">
-        <figure class="food-banner reveal">
-          <img src="images/cafe-banner.svg" width="1600" height="700" loading="eager" fetchpriority="high" decoding="async" alt="Placeholder for a Newyork Cafe &amp; Grill banner photo">
-        </figure>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section class="section section-cream" id="about">
-      <div class="container">
-        <div class="reveal">
-          <span class="eyebrow eyebrow-pastrami">Our place</span>
-          <h2 class="section-title">A neighborhood deli, done right.</h2>
-          <div class="lead-copy">
-            <p>Every morning starts the same way here: ovens on, bagels in, coffee brewing. Fresh-baked bagels, hot and cold sandwiches, wraps, and salads — made the way a good deli should make them.</p>
-            <p>We're a family-run spot on Inman Ave, serving the Edison neighborhood since 2021. Come in for breakfast, grab lunch to go, or order ahead — either way, you're getting it fresh.</p>
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Fan favorites</span>
+            <h2 class="section-title">Off the grill, made to order.</h2>
           </div>
+          <div class="hero-arrows">
+            <button class="round-btn" id="prod-prev" aria-label="Scroll left">‹</button>
+            <button class="round-btn round-btn-dark" id="prod-next" aria-label="Scroll right">›</button>
+          </div>
+        </div>
+        <div class="prodtrack" id="prodtrack">
+          <article class="prod-card">
+            <div class="prod-media"><img src="images/menu-bagels.svg" alt="Bacon, egg and cheese bagel" loading="lazy" decoding="async"><span class="prod-tag">Breakfast</span></div>
+            <div class="prod-body"><div class="prod-row"><h3>Bacon, Egg &amp; Cheese Bagel</h3><span class="prod-price">$6.50</span></div><p>On a fresh everything bagel, straight off the grill.</p></div>
+          </article>
+          <article class="prod-card">
+            <div class="prod-media"><img src="images/menu-hot-sandwiches.svg" alt="Philly cheesesteak" loading="lazy" decoding="async"><span class="prod-tag">Hot</span></div>
+            <div class="prod-body"><div class="prod-row"><h3>Philly Cheesesteak</h3><span class="prod-price">$10.95</span></div><p>Griddled steak, onions, and melted cheese on a hero.</p></div>
+          </article>
+          <article class="prod-card">
+            <div class="prod-media"><img src="images/menu-wraps.svg" alt="Buffalo chicken wrap" loading="lazy" decoding="async"><span class="prod-tag">Wrap</span></div>
+            <div class="prod-body"><div class="prod-row"><h3>Buffalo Chicken Wrap</h3><span class="prod-price">$9.75</span></div><p>Crispy buffalo chicken, ranch, and crunch.</p></div>
+          </article>
+          <article class="prod-card">
+            <div class="prod-media"><img src="images/menu-cold-sandwiches.svg" alt="Bagel with lox spread" loading="lazy" decoding="async"><span class="prod-tag">Bagel</span></div>
+            <div class="prod-body"><div class="prod-row"><h3>Bagel w/ Lox Spread</h3><span class="prod-price">$5.95</span></div><p>House lox spread on the bagel of your choice.</p></div>
+          </article>
+          <article class="prod-card">
+            <div class="prod-media"><img src="images/menu-salads.svg" alt="Greek salad" loading="lazy" decoding="async"><span class="prod-tag">Salad</span></div>
+            <div class="prod-body"><div class="prod-row"><h3>Greek Salad</h3><span class="prod-price">$9.25</span></div><p>Crisp greens, feta, olives, and a bright dressing.</p></div>
+          </article>
+          <article class="prod-card">
+            <div class="prod-media"><img src="images/menu-coffee-drinks.svg" alt="Iced coffee" loading="lazy" decoding="async"><span class="prod-tag">Drinks</span></div>
+            <div class="prod-body"><div class="prod-row"><h3>Iced Coffee</h3><span class="prod-price">$3.25</span></div><p>Cold, smooth, and brewed fresh every morning.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-intro reveal">
+          <span class="eyebrow">Our place</span>
+          <h2 class="section-title">A neighborhood deli, done right.</h2>
+          <p class="lead">Every morning starts the same way: ovens on, bagels in, coffee brewing. Fresh-baked bagels, hot and cold sandwiches, wraps, and salads — made the way a good deli should. A family-run spot on Inman Ave, serving Edison since 2021.</p>
         </div>
         <div class="features reveal">
-          <div class="feature">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/></svg>
-            <h3>Baked fresh daily</h3>
-            <p>Bagels out of the oven every morning — plain, sesame, everything, and more.</p>
-          </div>
-          <div class="feature">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17 h16"/><path d="M6 17 C 6 11, 18 11, 18 17"/><path d="M12 8 v-2"/></svg>
-            <h3>Made to order</h3>
-            <p>Your sandwich hits the grill when you order it, not before.</p>
-          </div>
-          <div class="feature">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20 C 6 15, 3 12, 3 8.5 C 3 6 5 4 7.5 4 C 9.5 4 11 5 12 6.5 C 13 5 14.5 4 16.5 4 C 19 4 21 6 21 8.5 C 21 12 18 15 12 20 Z"/></svg>
-            <h3>Family run</h3>
-            <p>Small crew, familiar faces, and regulars we know by name.</p>
-          </div>
+          <div class="feature"><div class="feature-icon">🥯</div><h3>Baked fresh daily</h3><p>Bagels out of the oven every morning — plain, sesame, everything, and more.</p></div>
+          <div class="feature"><div class="feature-icon">🔥</div><h3>Made to order</h3><p>Your sandwich hits the grill when you order it, not before.</p></div>
+          <div class="feature"><div class="feature-icon">👋</div><h3>Family run</h3><p>Small crew, familiar faces, and regulars we know by name.</p></div>
+          <div class="feature"><div class="feature-icon">☕</div><h3>Coffee's on</h3><p>Fresh drip and iced coffee brewing from open to close.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- Full menu -->
-    <section class="section section-espresso menu-section" id="menu" aria-labelledby="menu-title">
+    <!-- FULL MENU -->
+    <section class="section section-band menu-section" id="menu" aria-labelledby="menu-title">
       <div class="container">
-        <div class="menu-intro reveal">
-          <span class="eyebrow">The ticket</span>
-          <h2 class="section-title" id="menu-title">The full menu.</h2>
-          <p>Fresh breakfast, deli favorites, and coffee — made to order on Inman Ave.</p>
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">The ticket</span>
+            <h2 class="section-title" id="menu-title">The full menu.</h2>
+          </div>
         </div>
-
         <div class="menu-grid">
-          <article class="ticket menu-category reveal">
-            <img class="menu-category-image" src="images/menu-bagels.svg" width="900" height="540" loading="lazy" decoding="async" alt="Placeholder for a fresh bagels photo">
-            <div class="ticket-head">
-              <h3 class="ticket-cat">Fresh Baked Bagels</h3>
-              <span class="ticket-order">Order&nbsp;#01</span>
-            </div>
+          <article class="menu-card reveal">
+            <div class="menu-card-media"><img src="images/menu-bagels.svg" alt="Fresh bagels" loading="lazy" decoding="async"></div>
+            <h3>Fresh Baked Bagels</h3>
             <ul>
-              <li><span class="item-name">Bagel <small>Plain / Sesame / Everything / Poppy / Cinnamon Raisin</small></span><span class="leader"></span><span class="price">$1.50</span></li>
-              <li><span class="item-name">Bagel w/ Butter</span><span class="leader"></span><span class="price">$2.50</span></li>
-              <li><span class="item-name">Bagel w/ Cream Cheese</span><span class="leader"></span><span class="price">$3.25</span></li>
-              <li><span class="item-name">Bagel w/ Lox Spread</span><span class="leader"></span><span class="price">$5.95</span></li>
-              <li><span class="item-name">Bacon Egg &amp; Cheese Bagel</span><span class="leader"></span><span class="price">$6.50</span></li>
-              <li><span class="item-name">Taylor Ham Egg &amp; Cheese</span><span class="leader"></span><span class="price">$6.50</span></li>
+              <li><span>Bagel <small>Plain / Sesame / Everything / Poppy / Cinnamon Raisin</small></span><b>$1.50</b></li>
+              <li><span>Bagel w/ Butter</span><b>$2.50</b></li>
+              <li><span>Bagel w/ Cream Cheese</span><b>$3.25</b></li>
+              <li><span>Bagel w/ Lox Spread</span><b>$5.95</b></li>
+              <li><span>Bacon Egg &amp; Cheese Bagel</span><b>$6.50</b></li>
+              <li><span>Taylor Ham Egg &amp; Cheese</span><b>$6.50</b></li>
             </ul>
           </article>
-
-          <article class="ticket menu-category reveal">
-            <img class="menu-category-image" src="images/menu-hot-sandwiches.svg" width="900" height="540" loading="lazy" decoding="async" alt="Placeholder for a hot sandwiches photo">
-            <div class="ticket-head">
-              <h3 class="ticket-cat">Hot Sandwiches</h3>
-              <span class="ticket-order">Order&nbsp;#02</span>
-            </div>
+          <article class="menu-card reveal">
+            <div class="menu-card-media"><img src="images/menu-hot-sandwiches.svg" alt="Hot sandwiches" loading="lazy" decoding="async"></div>
+            <h3>Hot Sandwiches</h3>
             <ul>
-              <li><span class="item-name">Ham &amp; Cheese w/ Fries</span><span class="leader"></span><span class="price">$9.95</span></li>
-              <li><span class="item-name">Philly Cheesesteak</span><span class="leader"></span><span class="price">$10.95</span></li>
-              <li><span class="item-name">Grilled Chicken Sandwich</span><span class="leader"></span><span class="price">$9.50</span></li>
-              <li><span class="item-name">Chicken Parm Hero</span><span class="leader"></span><span class="price">$10.50</span></li>
-              <li><span class="item-name">Meatball Parm Hero</span><span class="leader"></span><span class="price">$9.95</span></li>
-              <li><span class="item-name">BLT</span><span class="leader"></span><span class="price">$8.50</span></li>
+              <li><span>Ham &amp; Cheese w/ Fries</span><b>$9.95</b></li>
+              <li><span>Philly Cheesesteak</span><b>$10.95</b></li>
+              <li><span>Grilled Chicken Sandwich</span><b>$9.50</b></li>
+              <li><span>Chicken Parm Hero</span><b>$10.50</b></li>
+              <li><span>Meatball Parm Hero</span><b>$9.95</b></li>
+              <li><span>BLT</span><b>$8.50</b></li>
             </ul>
           </article>
-
-          <article class="ticket menu-category reveal">
-            <img class="menu-category-image" src="images/menu-cold-sandwiches.svg" width="900" height="540" loading="lazy" decoding="async" alt="Placeholder for a cold sandwiches photo">
-            <div class="ticket-head">
-              <h3 class="ticket-cat">Cold Sandwiches</h3>
-              <span class="ticket-order">Order&nbsp;#03</span>
-            </div>
+          <article class="menu-card reveal">
+            <div class="menu-card-media"><img src="images/menu-cold-sandwiches.svg" alt="Cold sandwiches" loading="lazy" decoding="async"></div>
+            <h3>Cold Sandwiches</h3>
             <ul>
-              <li><span class="item-name">Turkey &amp; Swiss</span><span class="leader"></span><span class="price">$9.25</span></li>
-              <li><span class="item-name">Italian Combo</span><span class="leader"></span><span class="price">$10.25</span></li>
-              <li><span class="item-name">Roast Beef &amp; Cheddar</span><span class="leader"></span><span class="price">$9.95</span></li>
-              <li><span class="item-name">Tuna Salad Sandwich</span><span class="leader"></span><span class="price">$8.75</span></li>
-              <li><span class="item-name">Chicken Salad Sandwich</span><span class="leader"></span><span class="price">$8.75</span></li>
+              <li><span>Turkey &amp; Swiss</span><b>$9.25</b></li>
+              <li><span>Italian Combo</span><b>$10.25</b></li>
+              <li><span>Roast Beef &amp; Cheddar</span><b>$9.95</b></li>
+              <li><span>Tuna Salad Sandwich</span><b>$8.75</b></li>
+              <li><span>Chicken Salad Sandwich</span><b>$8.75</b></li>
             </ul>
           </article>
-
-          <article class="ticket menu-category reveal">
-            <img class="menu-category-image" src="images/menu-wraps.svg" width="900" height="540" loading="lazy" decoding="async" alt="Placeholder for a wraps photo">
-            <div class="ticket-head">
-              <h3 class="ticket-cat">Wraps</h3>
-              <span class="ticket-order">Order&nbsp;#04</span>
-            </div>
+          <article class="menu-card reveal">
+            <div class="menu-card-media"><img src="images/menu-wraps.svg" alt="Wraps" loading="lazy" decoding="async"></div>
+            <h3>Wraps</h3>
             <ul>
-              <li><span class="item-name">Buffalo Chicken Wrap</span><span class="leader"></span><span class="price">$9.75</span></li>
-              <li><span class="item-name">Chicken Caesar Wrap</span><span class="leader"></span><span class="price">$9.50</span></li>
-              <li><span class="item-name">Veggie Wrap</span><span class="leader"></span><span class="price">$8.50</span></li>
-              <li><span class="item-name">Turkey Ranch Wrap</span><span class="leader"></span><span class="price">$9.25</span></li>
+              <li><span>Buffalo Chicken Wrap</span><b>$9.75</b></li>
+              <li><span>Chicken Caesar Wrap</span><b>$9.50</b></li>
+              <li><span>Veggie Wrap</span><b>$8.50</b></li>
+              <li><span>Turkey Ranch Wrap</span><b>$9.25</b></li>
             </ul>
           </article>
-
-          <article class="ticket menu-category reveal">
-            <img class="menu-category-image" src="images/menu-salads.svg" width="900" height="540" loading="lazy" decoding="async" alt="Placeholder for a salads photo">
-            <div class="ticket-head">
-              <h3 class="ticket-cat">Salads</h3>
-              <span class="ticket-order">Order&nbsp;#05</span>
-            </div>
+          <article class="menu-card reveal">
+            <div class="menu-card-media"><img src="images/menu-salads.svg" alt="Salads" loading="lazy" decoding="async"></div>
+            <h3>Salads</h3>
             <ul>
-              <li><span class="item-name">Garden Salad</span><span class="leader"></span><span class="price">$7.50</span></li>
-              <li><span class="item-name">Caesar Salad <small>Add grilled chicken +$3.00</small></span><span class="leader"></span><span class="price">$8.50</span></li>
-              <li><span class="item-name">Greek Salad</span><span class="leader"></span><span class="price">$9.25</span></li>
-              <li><span class="item-name">Chef Salad</span><span class="leader"></span><span class="price">$10.50</span></li>
+              <li><span>Garden Salad</span><b>$7.50</b></li>
+              <li><span>Caesar Salad <small>Add grilled chicken +$3.00</small></span><b>$8.50</b></li>
+              <li><span>Greek Salad</span><b>$9.25</b></li>
+              <li><span>Chef Salad</span><b>$10.50</b></li>
             </ul>
           </article>
-
-          <article class="ticket menu-category reveal">
-            <img class="menu-category-image" src="images/menu-coffee-drinks.svg" width="900" height="540" loading="lazy" decoding="async" alt="Placeholder for a coffee and drinks photo">
-            <div class="ticket-head">
-              <h3 class="ticket-cat">Coffee &amp; Drinks</h3>
-              <span class="ticket-order">Order&nbsp;#06</span>
-            </div>
+          <article class="menu-card reveal">
+            <div class="menu-card-media"><img src="images/menu-coffee-drinks.svg" alt="Coffee and drinks" loading="lazy" decoding="async"></div>
+            <h3>Coffee &amp; Drinks</h3>
             <ul>
-              <li><span class="item-name">Drip Coffee <small>Small / Large</small></span><span class="leader"></span><span class="price">$2.25 / $2.75</span></li>
-              <li><span class="item-name">Iced Coffee</span><span class="leader"></span><span class="price">$3.25</span></li>
-              <li><span class="item-name">Hot Tea</span><span class="leader"></span><span class="price">$2.00</span></li>
-              <li><span class="item-name">Fountain Soda</span><span class="leader"></span><span class="price">$2.50</span></li>
-              <li><span class="item-name">Bottled Water</span><span class="leader"></span><span class="price">$1.50</span></li>
+              <li><span>Drip Coffee <small>Small / Large</small></span><b>$2.25 / $2.75</b></li>
+              <li><span>Iced Coffee</span><b>$3.25</b></li>
+              <li><span>Hot Tea</span><b>$2.00</b></li>
+              <li><span>Fountain Soda</span><b>$2.50</b></li>
+              <li><span>Bottled Water</span><b>$1.50</b></li>
             </ul>
           </article>
         </div>
-
         <p class="menu-note">Menu items and prices are subject to change. Call ahead for catering.</p>
       </div>
     </section>
 
-    <!-- Order -->
-    <section class="section section-cream">
-      <div class="container reveal">
-        <span class="eyebrow eyebrow-pastrami">Pickup &amp; delivery</span>
-        <h2 class="section-title">Skip the line.</h2>
-        <p class="lead-copy">Order pickup or delivery through our partners — your food's on the grill before you're out the door.</p>
+    <!-- SKIP THE LINE -->
+    <section class="section section-band skip-band">
+      <div class="container">
+        <div class="skip-copy">
+          <span class="eyebrow">Pickup &amp; delivery</span>
+          <h2 class="section-title big">Skip the line.</h2>
+          <p class="lead">Order pickup or delivery through our partners — your food's on the grill before you're out the door.</p>
+        </div>
         <div class="order-buttons">
-          <a class="btn btn-outline-dark" href="https://order.online" target="_blank" rel="noopener">Order.online</a>
-          <a class="btn btn-outline-dark" href="https://order.store" target="_blank" rel="noopener">Order.store</a>
-          <a class="btn btn-outline-dark" href="https://tryotter.com" target="_blank" rel="noopener">Otter</a>
+          <a class="btn btn-solid" href="https://order.online" target="_blank" rel="noopener">Order.online</a>
+          <a class="btn btn-outline" href="https://order.store" target="_blank" rel="noopener">Order.store</a>
+          <a class="btn btn-outline" href="https://tryotter.com" target="_blank" rel="noopener">Otter</a>
         </div>
       </div>
     </section>
 
-    <!-- Visit / contact -->
-    <section class="section section-espresso" id="visit">
-      <div class="container visit-grid">
-        <div class="visit-details reveal">
-          <span class="eyebrow">Find us</span>
-          <h2 class="section-title">Come say hi.</h2>
-          <address>1145 Inman Ave<br>Edison, NJ 08820</address>
-          <ul class="hours">
-            <li><span>Mon – Sat</span><span>6:30 AM – 4:00 PM</span></li>
-            <li><span>Sunday</span><span>7:00 AM – 2:00 PM</span></li>
-          </ul>
-          <a class="directions-link" href="https://www.google.com/maps/search/?api=1&amp;query=1145+Inman+Ave+Edison+NJ+08820" target="_blank" rel="noopener">Get directions &rarr;</a>
-        </div>
-        <div class="contact-block reveal">
-          <h3>Questions, catering, big orders?</h3>
-          <p>Drop us a line and we'll get back to you. Catering trays, office lunches, weekend orders — we've got you.</p>
-          <a class="btn btn-pastrami" href="mailto:newyorkcafegrill@gmail.com?subject=Hello%20from%20the%20website">Send us an email</a>
+    <!-- FIND US -->
+    <section class="section" id="visit">
+      <div class="container">
+        <span class="eyebrow">Find us</span>
+        <h2 class="section-title">Come say hi.</h2>
+        <div class="visit-grid">
+          <div class="visit-card reveal">
+            <p class="visit-addr">1145 Inman Ave</p>
+            <p class="visit-city">Edison, NJ 08820</p>
+            <div class="hours">
+              <div><span>Mon – Sat</span><b>6:30 AM – 4:00 PM</b></div>
+              <div><span>Sunday</span><b>7:00 AM – 2:00 PM</b></div>
+            </div>
+            <a class="link-accent" href="https://www.google.com/maps/search/?api=1&amp;query=1145+Inman+Ave+Edison+NJ+08820" target="_blank" rel="noopener">Get directions →</a>
+          </div>
+          <div class="visit-card visit-card-band reveal">
+            <h3>Questions, catering, big orders?</h3>
+            <p>Drop us a line and we'll get back to you. Catering trays, office lunches, weekend orders — we've got you.</p>
+            <a class="btn btn-solid" href="mailto:newyorkcafegrill@gmail.com?subject=Hello%20from%20the%20website">Send us an email</a>
+          </div>
         </div>
       </div>
     </section>
 
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <p class="footer-brand">Newyork Cafe &amp; Grill</p>
-          <p>1145 Inman Ave<br>Edison, NJ 08820</p>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="brand footer-brand">
+          <span class="brand-mark">N</span>
+          <span class="brand-name">Newyork Cafe &amp; Grill</span>
         </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="mailto:newyorkcafegrill@gmail.com">newyorkcafegrill@gmail.com</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Order</h4>
-          <ul>
-            <li><a href="https://order.online" target="_blank" rel="noopener">Order.online</a></li>
-            <li><a href="https://order.store" target="_blank" rel="noopener">Order.store</a></li>
-            <li><a href="https://tryotter.com" target="_blank" rel="noopener">Otter</a></li>
-          </ul>
-        </div>
+        <p>1145 Inman Ave<br>Edison, NJ 08820</p>
       </div>
-      <p class="copyright">&copy; <span id="year"></span> Newyork Cafe &amp; Grill LLC. All rights reserved.</p>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:newyorkcafegrill@gmail.com">newyorkcafegrill@gmail.com</a>
+      </div>
+      <div class="footer-col">
+        <h4>Order</h4>
+        <a href="https://order.online" target="_blank" rel="noopener">Order.online</a>
+        <a href="https://order.store" target="_blank" rel="noopener">Order.store</a>
+        <a href="https://tryotter.com" target="_blank" rel="noopener">Otter</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">&copy; <span id="year"></span> Newyork Cafe &amp; Grill LLC. All rights reserved.</div>
     </div>
   </footer>
 
