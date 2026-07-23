@@ -8,24 +8,23 @@ Plain HTML/CSS/JS — no build step, no dependencies.
 | File | Purpose |
 |------|---------|
 | `index.html` | Complete website: hero, banner, about, full menu, order links, and visit/contact |
-| `styles.css` | Colors, typography, responsive layout, tickets, images, and animations |
+| `styles.css` | Colors, typography, responsive layout, menu groups, images, and animations |
 | `script.js` | Mobile navigation, scroll animations, and footer year |
 | `images/` | Replaceable banner and menu-category image placeholders |
 
 ## Editing content
 
-- **Menu items and prices** — edit the `#menu` section in `index.html`. Each category is a `.ticket` block; each item is one `<li>` line. Copy an existing item to add another.
+- **Menu items and prices** — edit the `#menu` section in `index.html`. Categories are arranged inside themed `.menu-group` sections; each item is one `<li>` line.
 - **Hours and address** — edit the `#visit` section and footer in `index.html`.
 - **Contact email** — search `index.html` for `newyorkcafegrill@gmail.com`.
 - **Order links** — search `index.html` for `order.online`, `order.store`, and `tryotter.com`, then replace them with direct restaurant ordering URLs.
-- **Colors** — edit the CSS variables at the top of `styles.css` (`--espresso`, `--crust`, `--cream`, `--pastrami`, and `--olive`).
+- **Colors** — edit the CSS variables at the top of `styles.css`, including `--breakfast`, `--lunch`, and `--drinks` for the three menu themes.
 
 ## Replacing images
 
 Current image assets:
 
-- `images/restaurant-hero.jpg` — restaurant photo shown in the header
-- `images/cafe-banner.svg` — illustrated banner placeholder
+- `images/banner-updated.png` — food banner used across every rotating header slide
 - `images/menu-bagels.svg` — illustrated menu placeholder
 - `images/menu-hot-sandwiches.svg` — illustrated menu placeholder
 - `images/menu-cold-sandwiches.svg` — illustrated menu placeholder

@@ -10,6 +10,12 @@
   --line: #e4e4e7;
   --line-strong: #d4d4d8;
   --white: #ffffff;
+  --breakfast: #a85516;
+  --breakfast-soft: #fff7ed;
+  --lunch: #9f2d20;
+  --lunch-soft: #fff1ee;
+  --drinks: #2f6b5b;
+  --drinks-soft: #eef8f4;
   --serif: 'Bricolage Grotesque', system-ui, sans-serif;
   --sans: 'Work Sans', system-ui, sans-serif;
   --maxw: 1200px;
@@ -277,6 +283,57 @@ img { display: block; max-width: 100%; }
 .feature p { font-size: 14.5px; line-height: 1.55; color: var(--subtle); margin: 0; }
 
 /* ---- Menu ---- */
+.menu-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: -4px 0 36px;
+}
+.menu-jump a {
+  padding: 10px 16px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+}
+.menu-jump a:hover { border-color: var(--ink); color: var(--ink); }
+.menu-group {
+  --group-accent: var(--accent);
+  --group-soft: var(--band);
+  scroll-margin-top: 96px;
+  margin-top: 28px;
+  padding: 30px;
+  border: 1px solid color-mix(in srgb, var(--group-accent) 22%, white);
+  border-radius: 24px;
+  background: var(--group-soft);
+}
+.menu-group + .menu-group { margin-top: 34px; }
+.menu-group-breakfast { --group-accent: var(--breakfast); --group-soft: var(--breakfast-soft); }
+.menu-group-lunch { --group-accent: var(--lunch); --group-soft: var(--lunch-soft); }
+.menu-group-drinks { --group-accent: var(--drinks); --group-soft: var(--drinks-soft); }
+.menu-group-head { margin-bottom: 24px; }
+.menu-group-kicker {
+  color: var(--group-accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.menu-group-head h3 {
+  margin: 7px 0 0;
+  color: var(--group-accent);
+  font-family: var(--serif);
+  font-size: clamp(27px, 3vw, 38px);
+  line-height: 1.05;
+}
+.menu-group-head p {
+  max-width: 62ch;
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+}
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -284,14 +341,22 @@ img { display: block; max-width: 100%; }
 }
 .menu-card {
   background: #fff;
-  border: 1px solid var(--line);
+  border: 1px solid color-mix(in srgb, var(--group-accent) 18%, var(--line));
+  border-top: 4px solid var(--group-accent);
   border-radius: 18px;
   overflow: hidden;
-  padding: 0 0 12px;
+  padding: 0 0 14px;
+  box-shadow: 0 12px 30px rgba(24, 24, 27, .05);
 }
 .menu-card-media { height: 150px; background: var(--band); border-bottom: 1px solid var(--line); }
 .menu-card-media img { width: 100%; height: 100%; object-fit: cover; }
-.menu-card h3 { font-family: var(--serif); font-weight: 700; font-size: 20px; margin: 20px 24px 12px; }
+.menu-card h4 { color: var(--group-accent); font-family: var(--serif); font-weight: 700; font-size: 20px; margin: 20px 24px 12px; }
+.menu-flavors {
+  color: var(--subtle);
+  font-size: 12.5px;
+  line-height: 1.5;
+  margin: -4px 24px 16px;
+}
 .menu-card ul { list-style: none; margin: 0; padding: 0 24px; }
 .menu-card li {
   display: flex;
@@ -304,7 +369,7 @@ img { display: block; max-width: 100%; }
 }
 .menu-card li span { color: var(--ink); }
 .menu-card li small { display: block; color: var(--subtle); font-size: 12.5px; margin-top: 2px; }
-.menu-card li b { font-family: var(--serif); font-weight: 700; color: var(--accent); white-space: nowrap; }
+.menu-card li b { font-family: var(--serif); font-weight: 700; color: var(--group-accent); white-space: nowrap; }
 .menu-note { font-size: 14px; color: var(--subtle); margin-top: 28px; }
 
 /* ---- Skip the line ---- */
@@ -390,4 +455,11 @@ img { display: block; max-width: 100%; }
   .container { padding: 0 20px; }
   .section { padding: 56px 0; }
   .prod-card { flex-basis: 82%; }
+  .menu-group { padding: 22px 14px; border-radius: 18px; }
+  .menu-grid { grid-template-columns: 1fr; gap: 18px; }
+  .menu-card h4 { margin-left: 18px; margin-right: 18px; }
+  .menu-card ul { padding-left: 18px; padding-right: 18px; }
+  .menu-flavors { margin-left: 18px; margin-right: 18px; }
+  .menu-card li { align-items: flex-start; font-size: 14px; }
+  .menu-card li b { text-align: right; }
 }
