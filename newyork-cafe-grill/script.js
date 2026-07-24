@@ -1,4 +1,4 @@
-// Newyork Cafe & Grill — nav toggle, hero slider, product scroll, reveal, year
+// Newyork Cafe & Grill — nav toggle, hero slider, reveal, year
 
 (function () {
   "use strict";
@@ -87,16 +87,6 @@
 
     render();
     start();
-  }
-
-  /* ---- Product horizontal scroller ---- */
-  var prodTrack = document.getElementById("prodtrack");
-  if (prodTrack) {
-    var STEP = 344; // card width (300) + gap (22) + a touch
-    var pNext = document.getElementById("prod-next");
-    var pPrev = document.getElementById("prod-prev");
-    if (pNext) pNext.addEventListener("click", function () { prodTrack.scrollBy({ left: STEP, behavior: "smooth" }); });
-    if (pPrev) pPrev.addEventListener("click", function () { prodTrack.scrollBy({ left: -STEP, behavior: "smooth" }); });
   }
 
   /* ---- Scroll reveal (once per element) ---- */

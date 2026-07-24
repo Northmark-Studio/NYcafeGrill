@@ -103,23 +103,8 @@ img { display: block; max-width: 100%; }
   justify-content: space-between;
   gap: 24px;
 }
-.brand { display: flex; align-items: center; gap: 11px; color: var(--ink); }
-.brand-mark {
-  width: 38px; height: 38px;
-  border-radius: 50%;
-  background: var(--accent);
-  color: #fff;
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--serif);
-  font-weight: 800;
-  font-size: 19px;
-}
-.brand-name {
-  font-family: var(--serif);
-  font-weight: 700;
-  font-size: 19px;
-  letter-spacing: -.01em;
-}
+.brand { display: flex; align-items: center; color: var(--ink); }
+.brand-logo { display: block; width: auto; height: 68px; }
 .nav-links { display: flex; align-items: center; gap: 30px; }
 .nav-links a { color: var(--muted); font-weight: 500; font-size: 15px; }
 .nav-links a:hover { color: var(--ink); }
@@ -223,40 +208,6 @@ img { display: block; max-width: 100%; }
   margin-bottom: 30px;
 }
 
-/* ---- Product slider ---- */
-.prodtrack {
-  display: flex;
-  gap: 22px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 16px;
-  scroll-padding-left: 2px;
-}
-.prodtrack::-webkit-scrollbar { height: 8px; }
-.prodtrack::-webkit-scrollbar-thumb { background: rgba(24,24,27,.18); border-radius: 99px; }
-.prod-card {
-  flex: 0 0 300px;
-  scroll-snap-align: start;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  overflow: hidden;
-}
-.prod-media { position: relative; height: 210px; background: var(--band); }
-.prod-media img { width: 100%; height: 100%; object-fit: cover; }
-.prod-tag {
-  position: absolute; top: 14px; left: 14px;
-  background: #fff; color: var(--ink);
-  font-size: 12px; font-weight: 600; letter-spacing: .04em;
-  padding: 6px 12px; border-radius: 99px;
-  border: 1px solid var(--line);
-}
-.prod-body { padding: 20px 20px 22px; }
-.prod-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
-.prod-row h3 { font-family: var(--serif); font-weight: 700; font-size: 19px; line-height: 1.15; margin: 0; }
-.prod-price { font-family: var(--serif); font-weight: 700; font-size: 18px; color: var(--accent); white-space: nowrap; }
-.prod-body p { font-size: 14px; color: var(--subtle); line-height: 1.5; margin: 8px 0 0; }
-
 /* ---- About ---- */
 .about-intro { max-width: 720px; }
 .features {
@@ -304,16 +255,29 @@ img { display: block; max-width: 100%; }
   --group-soft: var(--band);
   scroll-margin-top: 96px;
   margin-top: 28px;
-  padding: 30px;
-  border: 1px solid color-mix(in srgb, var(--group-accent) 22%, white);
+  border: 1px solid var(--line);
   border-radius: 24px;
-  background: var(--group-soft);
+  background: #fff;
+  overflow: hidden;
 }
 .menu-group + .menu-group { margin-top: 34px; }
 .menu-group-breakfast { --group-accent: var(--breakfast); --group-soft: var(--breakfast-soft); }
 .menu-group-lunch { --group-accent: var(--lunch); --group-soft: var(--lunch-soft); }
 .menu-group-drinks { --group-accent: var(--drinks); --group-soft: var(--drinks-soft); }
-.menu-group-head { margin-bottom: 24px; }
+.menu-group-head {
+  position: relative;
+  margin: 0;
+  padding: 28px 30px 30px 36px;
+  background: var(--group-soft);
+  border-bottom: 1px solid color-mix(in srgb, var(--group-accent) 18%, var(--line));
+}
+.menu-group-head::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 6px;
+  background: var(--group-accent);
+}
 .menu-group-kicker {
   color: var(--group-accent);
   font-size: 12px;
@@ -338,19 +302,18 @@ img { display: block; max-width: 100%; }
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 24px;
+  padding: 28px 30px 30px;
 }
 .menu-card {
   background: #fff;
-  border: 1px solid color-mix(in srgb, var(--group-accent) 18%, var(--line));
-  border-top: 4px solid var(--group-accent);
+  border: 1px solid var(--line);
   border-radius: 18px;
   overflow: hidden;
   padding: 0 0 14px;
-  box-shadow: 0 12px 30px rgba(24, 24, 27, .05);
 }
 .menu-card-media { height: 150px; background: var(--band); border-bottom: 1px solid var(--line); }
 .menu-card-media img { width: 100%; height: 100%; object-fit: cover; }
-.menu-card h4 { color: var(--group-accent); font-family: var(--serif); font-weight: 700; font-size: 20px; margin: 20px 24px 12px; }
+.menu-card h4 { color: var(--ink); font-family: var(--serif); font-weight: 700; font-size: 20px; margin: 20px 24px 12px; }
 .menu-flavors {
   color: var(--subtle);
   font-size: 12.5px;
@@ -369,7 +332,7 @@ img { display: block; max-width: 100%; }
 }
 .menu-card li span { color: var(--ink); }
 .menu-card li small { display: block; color: var(--subtle); font-size: 12.5px; margin-top: 2px; }
-.menu-card li b { font-family: var(--serif); font-weight: 700; color: var(--group-accent); white-space: nowrap; }
+.menu-card li b { font-family: var(--serif); font-weight: 700; color: var(--ink); white-space: nowrap; }
 .menu-note { font-size: 14px; color: var(--subtle); margin-top: 28px; }
 
 /* ---- Skip the line ---- */
@@ -407,8 +370,7 @@ img { display: block; max-width: 100%; }
 .site-footer { background: var(--band); border-top: 1px solid var(--line); }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; padding-top: 64px; padding-bottom: 40px; }
 .footer-brand { margin-bottom: 16px; }
-.footer-brand .brand-mark { width: 36px; height: 36px; font-size: 18px; }
-.footer-brand .brand-name { font-size: 18px; }
+.footer-brand .brand-logo { height: 76px; }
 .footer-col p { font-size: 15px; line-height: 1.6; color: var(--subtle); margin: 0; }
 .footer-col h4 { font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--subtle); margin: 0 0 16px; }
 .footer-col > a { display: block; color: var(--muted); font-size: 15px; margin-bottom: 10px; }
@@ -454,9 +416,9 @@ img { display: block; max-width: 100%; }
 @media (max-width: 520px) {
   .container { padding: 0 20px; }
   .section { padding: 56px 0; }
-  .prod-card { flex-basis: 82%; }
-  .menu-group { padding: 22px 14px; border-radius: 18px; }
-  .menu-grid { grid-template-columns: 1fr; gap: 18px; }
+  .menu-group { border-radius: 18px; }
+  .menu-group-head { padding: 22px 20px 24px 26px; }
+  .menu-grid { grid-template-columns: 1fr; gap: 18px; padding: 18px 14px 22px; }
   .menu-card h4 { margin-left: 18px; margin-right: 18px; }
   .menu-card ul { padding-left: 18px; padding-right: 18px; }
   .menu-flavors { margin-left: 18px; margin-right: 18px; }
