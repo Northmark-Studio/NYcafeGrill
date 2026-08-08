@@ -321,11 +321,6 @@ img { display: block; max-width: 100%; }
   overflow: hidden;
   padding: 0 0 14px;
 }
-.menu-card-centered {
-  grid-column: 1 / -1;
-  width: min(100%, 360px);
-  justify-self: center;
-}
 .menu-card-media { height: 150px; background: var(--band); border-bottom: 1px solid var(--line); }
 .menu-card-media img { width: 100%; height: 100%; object-fit: cover; }
 .menu-card h4 { color: var(--ink); font-family: var(--serif); font-weight: 700; font-size: 20px; margin: 20px 24px 12px; }
@@ -335,6 +330,15 @@ img { display: block; max-width: 100%; }
   line-height: 1.5;
   margin: -4px 24px 16px;
 }
+.menu-subhead {
+  color: var(--group-accent);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin: 18px 24px 8px;
+}
+.menu-card ul + .menu-subhead { margin-top: 20px; }
 .menu-card ul { list-style: none; margin: 0; padding: 0 24px; }
 .menu-card li {
   display: flex;
@@ -473,6 +477,7 @@ img { display: block; max-width: 100%; }
   .menu-card h4 { margin-left: 18px; margin-right: 18px; }
   .menu-card ul { padding-left: 18px; padding-right: 18px; }
   .menu-flavors { margin-left: 18px; margin-right: 18px; }
+  .menu-subhead { margin-left: 18px; margin-right: 18px; }
   .menu-card li { align-items: flex-start; font-size: 14px; }
   .menu-card li b { text-align: right; }
 }
