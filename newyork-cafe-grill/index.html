@@ -40,10 +40,23 @@
 
   <main>
 
-    <!-- HERO IMAGE -->
+    <!-- HERO IMAGE SLIDER -->
     <section class="hero" aria-label="Featured food">
-      <div class="hero-media">
-        <img src="images/banner-updated.png" alt="Bagel breakfast sandwich, hot pastrami sandwich, chips, pickles and a deli sub" loading="eager" fetchpriority="high" decoding="async">
+      <div class="hero-viewport">
+        <div class="hero-track" id="hero-track">
+          <div class="hero-media">
+            <img src="images/banner-updated.png" alt="Bagel breakfast sandwich, hot pastrami sandwich, chips, pickles and a deli sub" loading="eager" fetchpriority="high" decoding="async">
+          </div>
+          <div class="hero-media">
+            <img src="images/party-sub-banner.jpg" alt="Six-foot Italian party sub layered with salami, ham, provolone, lettuce and tomato" loading="lazy" decoding="async">
+          </div>
+        </div>
+
+        <div class="hero-controls">
+          <button class="round-btn" id="hero-prev" aria-label="Previous slide">&lsaquo;</button>
+          <div class="hero-dots" id="hero-dots" role="tablist" aria-label="Choose slide"></div>
+          <button class="round-btn" id="hero-next" aria-label="Next slide">&rsaquo;</button>
+        </div>
       </div>
     </section>
 
@@ -363,7 +376,41 @@
           <div class="visit-card visit-card-band reveal">
             <h3>Questions, catering, big orders?</h3>
             <p>Drop us a line and we'll get back to you. Catering trays, office lunches, weekend orders — we've got you.</p>
-            <a class="btn btn-solid" href="mailto:newyorkcafegrill@gmail.com?subject=Hello%20from%20the%20website">Send us an email</a>
+
+            <form class="contact-form" id="contact-form" novalidate>
+              <div class="field">
+                <label for="cf-name">Name</label>
+                <input type="text" id="cf-name" name="name" autocomplete="name" required>
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="cf-email">Email</label>
+                  <input type="email" id="cf-email" name="email" autocomplete="email" required>
+                </div>
+                <div class="field">
+                  <label for="cf-phone">Phone <span class="opt">(optional)</span></label>
+                  <input type="tel" id="cf-phone" name="phone" autocomplete="tel">
+                </div>
+              </div>
+              <div class="field">
+                <label for="cf-topic">What's this about?</label>
+                <select id="cf-topic" name="topic">
+                  <option>General question</option>
+                  <option>Catering / party trays</option>
+                  <option>Party sub order</option>
+                  <option>Office lunch</option>
+                  <option>Feedback</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="cf-message">Message</label>
+                <textarea id="cf-message" name="message" rows="4" required></textarea>
+              </div>
+              <button class="btn btn-solid" type="submit">Send message</button>
+              <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
+            </form>
+
+            <p class="form-alt">Prefer your own inbox? <a href="mailto:newyorkcafegrill@gmail.com?subject=Hello%20from%20the%20website">newyorkcafegrill@gmail.com</a> &nbsp;·&nbsp; <a href="tel:+19085467775">908-546-7775</a></p>
           </div>
         </div>
       </div>
