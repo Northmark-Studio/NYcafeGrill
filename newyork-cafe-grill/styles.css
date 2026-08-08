@@ -356,7 +356,23 @@ img { display: block; max-width: 100%; }
 .skip-band .container { display: grid; gap: 34px; }
 .skip-copy { max-width: 620px; }
 .skip-band .lead { font-size: 18px; }
-.order-buttons { display: flex; flex-wrap: wrap; gap: 14px; }
+.order-logos { display: flex; flex-wrap: wrap; gap: 18px; }
+.order-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 24px 12px 12px;
+  background: #fff;
+  border: 1px solid var(--line-strong);
+  border-radius: 99px;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--ink);
+  transition: border-color .2s ease, box-shadow .2s ease, transform .15s ease;
+}
+.order-logo img { width: 46px; height: 46px; border-radius: 99px; object-fit: cover; }
+.order-logo:hover { border-color: var(--ink); box-shadow: 0 4px 14px rgba(0, 0, 0, .08); }
+.order-logo:active { transform: translateY(1px); }
 
 /* ---- Visit ---- */
 .visit-grid {
